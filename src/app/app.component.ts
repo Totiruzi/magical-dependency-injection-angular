@@ -9,7 +9,7 @@ import { BookService } from './services/book.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'DI Magical Angular';
+  title = 'DI Token Angular';
   book!: ReadBook;
 
   constructor(private bookService: BookService) {}
