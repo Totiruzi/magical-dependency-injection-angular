@@ -13,7 +13,7 @@ export class TempLogsComponent implements OnInit, OnChanges {
   temps: Temp;
 
   constructor(@Optional() private tempService: TempService) {
-    !TempService ? this.temps = console 
+    !tempService ? this.temps = console 
       : this.temps = this.tempService;
    }
 
@@ -27,7 +27,7 @@ export class TempLogsComponent implements OnInit, OnChanges {
       message = `initial temperature is ${currentValue.trim()}`
     }else {
       message = `temperature changed to ${currentValue.trim()}` 
-      this.temps.warn(message)
+      this.temps.log(message)
     }
     this.logs.push(message);
   }
