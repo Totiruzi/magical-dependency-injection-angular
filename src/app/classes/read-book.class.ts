@@ -10,6 +10,6 @@ export class ReadBook implements Book {
   }
 
   recommendBook() {
-    return `Have you read this book ${this.title} by ${this.author}`
+    return `Have you read this book ${this.title} by: ${this.author}`
   }
 }

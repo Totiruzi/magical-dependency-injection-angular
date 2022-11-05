@@ -11,19 +11,19 @@ export class BookService {
   books: Book[] = [
     {
       title: 'Learning Angular - Third Edition',
-      author: 'Aristeidis Bampakos and Author:Pablo Deeleman'
+      author: 'Aristeidis Bampakos & Pablo Deeleman'
     },
     {
       title: 'Angular Projects - Second Edition',
-      author: 'Aristeidis Bampakos and Author:Mark Thompson'
+      author: 'Aristeidis Bampakos & Mark Thompson'
     },
     {
       title: 'Angular Cookbook',
-      author: 'Muhammad Ahsan Ayaz and Najla Obaid'
+      author: 'Muhammad Ahsan Ayaz & Najla Obaid'
     },
     {
       title: 'Simply Scheme Introducing Computer Science',
-      author: 'Brian Harvey and Matthew Wright'
+      author: 'Brian Harvey & Matthew Wright'
     },
     {
       title: 'Reactive Patterns with RxJS for Angular',
