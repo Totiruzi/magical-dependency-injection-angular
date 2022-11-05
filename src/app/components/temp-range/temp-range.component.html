@@ -1,0 +1,9 @@
+<form [formGroup]="tempForm" (ngSubmit)="formSubmit()">
+  <div class="form-group">
+    <label for="temperature">Current Temp</label>
+    <input formControlName="degree" type="text" class="form-control" id="temperature" aria-describedby="versionHelp" placeholder="Enter temperature range">
+    <small id="versionHelp" class="form-text text-muted">Use semantic versioning (x.x)</small>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<app-temp-logs [tempType]="tempTag"></app-temp-logs>
