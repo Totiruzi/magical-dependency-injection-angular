@@ -22,7 +22,7 @@ export class BookService {
     },
     {
       title: 'Simply Scheme Introducing Computer Science',
-      author: 'Brian Harvey Matthew Wright'
+      author: 'Brian Harvey and Matthew Wright'
     },
     {
       title: 'Reactive Patterns with RxJS for Angular',
