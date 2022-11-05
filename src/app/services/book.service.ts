@@ -1,6 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { ReadBook } from '../classes/read-book.class';
 import { Book } from '../interfaces/book';
+import { READBOOK } from '../classes/read-book-token';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ export class BookService {
     },
     {
       title: 'Angular Cookbook',
-      author: 'Muhammad Ahsan Ayaz and Author:Najla Obaid'
+      author: 'Muhammad Ahsan Ayaz and Najla Obaid'
     },
     {
       title: 'Simply Scheme Introducing Computer Science',
@@ -37,10 +38,11 @@ export class BookService {
       author: 'Kent Beck'
     }
   ]
-  constructor() { }
+  constructor(@Inject(READBOOK) public readBook: typeof ReadBook) { }
 
   getBook() {
     const book = this.books[Math.floor(Math.random() * this.books.length)];
     return new ReadBook(book);
+    // return new this.readBook(book);
   }
 }
