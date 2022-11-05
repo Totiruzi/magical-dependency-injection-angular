@@ -1,5 +1,5 @@
 import { TempService } from './../../service/temp.service';
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, Optional, SimpleChanges } from '@angular/core';
 import { Temp } from './../../interfaces/temp';
 
 @Component({
@@ -12,8 +12,9 @@ export class TempLogsComponent implements OnInit, OnChanges {
   logs: string[] = [];
   temps: Temp;
 
-  constructor(private tempService: TempService) {
-    this.temps = tempService;
+  constructor(@Optional() private tempService: TempService) {
+    !TempService ? this.temps = console 
+      : this.temps = this.tempService;
    }
 
   ngOnInit(): void {
@@ -26,7 +27,7 @@ export class TempLogsComponent implements OnInit, OnChanges {
       message = `initial temperature is ${currentValue.trim()}`
     }else {
       message = `temperature changed to ${currentValue.trim()}` 
-      this.temps.warm(message)
+      this.temps.warn(message)
     }
     this.logs.push(message);
   }

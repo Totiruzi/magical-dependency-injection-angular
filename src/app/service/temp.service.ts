@@ -2,26 +2,24 @@ import { Injectable } from '@angular/core';
 import { Temp } from '../interfaces/temp';
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class TempService implements Temp{
 
   constructor() { }
-  cold(val: number) {
-    this.saveTempLog(val, 'cold')
+  log(val: number) {
+    this.saveTempLog(val, 'log')
   }
 
-  warm(val: number) {
-    this.saveTempLog(val, 'warm')
+  warn(val: number) {
+    this.saveTempLog(val, 'warn')
   }
 
-  hot(val: number) {
-    this.saveTempLog(val, 'hot')
+  info(val: number) {
+    this.saveTempLog(val, 'info')
   }
 
-  furnace(val: number) {
-    this.saveTempLog(val, 'furnace')
+  error(val: number) {
+    this.saveTempLog(val, 'error')
   }
 
 

@@ -1,6 +1,6 @@
 export interface Temp {
-  cold: Function
-  warm: Function
-  hot: Function
-  furnace: Function
+  info: Function
+  warn: Function
+  log: Function
+  error: Function
 }
