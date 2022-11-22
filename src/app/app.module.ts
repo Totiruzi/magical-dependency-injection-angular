@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ItemsButtonComponent } from './components/items-button/items-button.component';
+import { ServicesModule } from './services/services.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { ItemsButtonComponent } from './components/items-button/items-button.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ServicesModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

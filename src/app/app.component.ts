@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'DI Singletone Service';
+  title = 'DI Singletone Service forRoot';
 }
