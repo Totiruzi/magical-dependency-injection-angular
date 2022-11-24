@@ -1,0 +1,35 @@
+<div class="shelves" *ngIf="$shelve | async as shelve">
+  <h4>Book Shelve <i class="material-icons">library_books</i></h4>
+  <div class="add-section">
+    <div class="input-group">
+      <select [(ngModel)]="pickedBook" class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+        <option selected value="">Pick...</option>
+        <option *ngFor="let book of books" value="{{book}}">{{book}}</option>
+      </select>
+      <div class="input-group-append">
+        <button
+          [disabled]="!pickedBook"
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="addPickedBookToShelve()">
+          Add to Shelve
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="books">
+    <ng-container *ngIf="shelve.length > 0; else shelveEmptyMessage">
+      <div class="books__item" *ngFor="let book of shelve;">
+        <div class="books__item__title">{{book.name}}</div>
+        <div class="books__item__delete-icon" (click)="deleteBookFromShelve(book)">
+          <div class="material-icons">delete</div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<ng-template #shelveEmptyMessage>
+  <div class="books__no-items-msg">
+    No books on the shelve. Add some books!
+  </div>
+</ng-template>
