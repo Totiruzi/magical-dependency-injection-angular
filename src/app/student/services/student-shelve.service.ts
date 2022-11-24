@@ -1,6 +1,5 @@
 import { ShelveService } from 'src/app/services/shelve.service';
 import { Injectable } from '@angular/core';
-import { IBook } from 'src/app/interfaces/book.interface';
 
 @Injectable({
   providedIn: 'root'
