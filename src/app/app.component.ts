@@ -8,7 +8,7 @@ import { AuthService } from './services/auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Different Services provided to an App with the same alias class';
+  title = 'Using Value Providers in an Angular App';
   constructor(
     private authservice: AuthService,
     private router: Router
