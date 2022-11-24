@@ -1,6 +1,6 @@
-import { GuardsGuard } from './guards/guards.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GuardsGuard } from './guards/guards.guard';
 
 const routes: Routes = [
   {
@@ -25,7 +25,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {relativeLinkResolution: 'legacy'})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

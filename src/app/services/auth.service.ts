@@ -7,7 +7,6 @@ import { UserType } from '../constants/user-type';
 export class AuthService {
   loggedInUserType: any = null;
 
-
   constructor() {
     this.loggedInUserType = window.localStorage.getItem('loggedIn')
   }

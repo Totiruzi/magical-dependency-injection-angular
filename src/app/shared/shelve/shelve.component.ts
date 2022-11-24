@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IBook } from './../../interfaces/book.interface';
 import { Book } from './../../constants/book';
 import { ShelveService } from 'src/app/services/shelve.service';
+import { APP_CONFIG } from 'src/app/constants/app-config';
+import { IAppConfig } from './../../constants/app-config';
 
 @Component({
   selector: 'app-shelve',
@@ -13,12 +15,17 @@ export class ShelveComponent implements OnInit {
   $shelve: Observable<IBook[]>;
   pickedBook: Book = '' as null;
   books: string[] = Object.values(Book);
+  canDeleteBooks: boolean;
 
-  constructor(private shelveService: ShelveService) { }
+  constructor(
+    private shelveService: ShelveService,
+    @Inject(APP_CONFIG) private config: IAppConfig
+  ) {}
 
   ngOnInit(): void {
     this.$shelve = this.shelveService.$shelve;
     this.shelveService.loadBooks();
+    this.canDeleteBooks = this.config.canDeleteBooks;
   }
 
   addPickedBookToShelve() {

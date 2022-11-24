@@ -21,7 +21,11 @@
     <ng-container *ngIf="shelve.length > 0; else shelveEmptyMessage">
       <div class="books__item" *ngFor="let book of shelve;">
         <div class="books__item__title">{{book.name}}</div>
-        <div class="books__item__delete-icon" (click)="deleteBookFromShelve(book)">
+        <div
+          *ngIf="canDeleteBooks"
+          class="books__item__delete-icon" 
+          (click)="deleteBookFromShelve(book)"
+        >
           <div class="material-icons">delete</div>
         </div>
       </div>
