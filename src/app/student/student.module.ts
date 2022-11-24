@@ -1,3 +1,5 @@
+import { StudentShelveService } from './services/student-shelve.service';
+import { ShelveService } from 'src/app/services/shelve.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StudentComponent } from './student/student.component';
@@ -14,6 +16,12 @@ import { SharedModule } from './../shared/shared.module';
     CommonModule,
     StudentRoutingModule,
     SharedModule
+  ],
+  providers: [
+    {
+      provide: ShelveService,
+      useClass: StudentShelveService
+    }
   ]
 })
 export class StudentModule { }
