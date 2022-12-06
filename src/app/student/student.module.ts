@@ -1,10 +1,10 @@
 import { StudentShelveService } from './services/student-shelve.service';
-import { ShelveService } from '../services/shelve.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StudentComponent } from './student/student.component';
 import { StudentRoutingModule } from './sudent.routing.module';
 import { SharedModule } from './../shared/shared.module';
+import { ShelveService} from '../services/shelve.service';
 
 
 
