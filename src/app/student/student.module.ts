@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { StudentComponent } from './student/student.component';
 import { StudentRoutingModule } from './sudent.routing.module';
 import { SharedModule } from './../shared/shared.module';
-import { APP_CONFIG } from 'src/app/constants/app-config';
+import { APP_CONFIG } from '../constants/app-config';
 import { StudentConfig } from './constants/student.config';
 
 

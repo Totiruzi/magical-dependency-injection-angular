@@ -2,9 +2,8 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IBook } from './../../interfaces/book.interface';
 import { Book } from './../../constants/book';
-import { ShelveService } from 'src/app/services/shelve.service';
-import { APP_CONFIG } from 'src/app/constants/app-config';
-import { IAppConfig } from './../../constants/app-config';
+import { ShelveService } from '../../services/shelve.service';
+import { APP_CONFIG, IAppConfig } from './../../constants/app-config';
 
 @Component({
   selector: 'app-shelve',
