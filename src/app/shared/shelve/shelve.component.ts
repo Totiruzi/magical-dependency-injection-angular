@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IBook } from './../../interfaces/book.interface';
 import { Book } from './../../constants/book';
-import { ShelveService } from 'src/app/services/shelve.service';
+import { ShelveService } from '../../services/shelve.service';
 
 @Component({
   selector: 'app-shelve',

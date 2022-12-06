@@ -1,4 +1,4 @@
-import { ShelveService } from 'src/app/services/shelve.service';
+import { ShelveService } from '../../services/shelve.service';
 import { Injectable } from '@angular/core';
 
 @Injectable({
